@@ -13,7 +13,31 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'work-sans': ['Work Sans', 'sans-serif'],
+        'oswald': ['Oswald', 'sans-serif'],
+      },
+      fontSize: {
+        'hero': ['96px', { lineHeight: '1', fontWeight: '700' }],
+        'section-header': ['48px', { lineHeight: '1.2', fontWeight: '700' }],
+        'cta': ['40px', { lineHeight: '1.2', fontWeight: '600' }],
+        'card-header': ['32px', { lineHeight: '1.3', fontWeight: '700' }],
+        'stats': ['64px', { lineHeight: '1', fontWeight: '700' }],
+        'stories-header': ['40px', { lineHeight: '1.2', fontWeight: '700' }],
+        'body': ['20px', { lineHeight: '1.6', fontWeight: '400' }],
+        'body-small': ['16px', { lineHeight: '1.5', fontWeight: '400' }],
+      },
       colors: {
+        // Brand colors
+        brand: {
+          blue: "hsl(var(--brand-blue))",
+          dark: "hsl(var(--brand-dark))",
+          white: "hsl(var(--brand-white))",
+          'light-gray': "hsl(var(--brand-light-gray))",
+          mint: "hsl(var(--brand-mint))",
+          pink: "hsl(var(--brand-pink))",
+        },
+        // Theme colors
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

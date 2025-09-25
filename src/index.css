@@ -2,41 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Asted Charity Design System - Based on style guide provided
+All colors MUST be HSL format and match the brand specification.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Brand Colors from Style Guide */
+    --brand-blue: 240 100% 25%;      /* #000080 */
+    --brand-dark: 0 0% 8.6%;         /* #161616 */
+    --brand-white: 0 0% 100%;        /* #FFFFFF */
+    --brand-light-gray: 0 0% 93.7%;  /* #EFEFEF */
+    --brand-mint: 146 64% 90%;       /* #C8F0DD */
+    --brand-pink: 0 67% 95%;         /* #FAE8E8 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Theme Mappings */
+    --background: var(--brand-white);
+    --foreground: var(--brand-dark);
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --card: var(--brand-white);
+    --card-foreground: var(--brand-dark);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --popover: var(--brand-white);
+    --popover-foreground: var(--brand-dark);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --primary: var(--brand-blue);
+    --primary-foreground: var(--brand-white);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: var(--brand-light-gray);
+    --secondary-foreground: var(--brand-dark);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: var(--brand-light-gray);
+    --muted-foreground: var(--brand-dark);
+
+    --accent: var(--brand-mint);
+    --accent-foreground: var(--brand-dark);
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: var(--brand-white);
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: var(--brand-light-gray);
+    --input: var(--brand-light-gray);
+    --ring: var(--brand-blue);
 
-    --radius: 0.5rem;
+    --radius: 0rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,41 +65,34 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Keep light theme for charity site - dark mode not needed */
+    --background: var(--brand-white);
+    --foreground: var(--brand-dark);
+    --card: var(--brand-white);
+    --card-foreground: var(--brand-dark);
+    --popover: var(--brand-white);
+    --popover-foreground: var(--brand-dark);
+    --primary: var(--brand-blue);
+    --primary-foreground: var(--brand-white);
+    --secondary: var(--brand-light-gray);
+    --secondary-foreground: var(--brand-dark);
+    --muted: var(--brand-light-gray);
+    --muted-foreground: var(--brand-dark);
+    --accent: var(--brand-mint);
+    --accent-foreground: var(--brand-dark);
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: var(--brand-white);
+    --border: var(--brand-light-gray);
+    --input: var(--brand-light-gray);
+    --ring: var(--brand-blue);
+    --sidebar-background: var(--brand-white);
+    --sidebar-foreground: var(--brand-dark);
+    --sidebar-primary: var(--brand-blue);
+    --sidebar-primary-foreground: var(--brand-white);
+    --sidebar-accent: var(--brand-light-gray);
+    --sidebar-accent-foreground: var(--brand-dark);
+    --sidebar-border: var(--brand-light-gray);
+    --sidebar-ring: var(--brand-blue);
   }
 }
 
