@@ -5,6 +5,9 @@ import Services from "@/components/Services";
 import ImpactStories from "@/components/ImpactStories";
 import Statistics from "@/components/Statistics";
 import Donation from "@/components/Donation";
+import NewsEvents from "@/components/NewsEvents";
+import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -17,7 +20,10 @@ const Index = () => {
         <ImpactStories />
         <Statistics />
         <Donation />
+        <NewsEvents />
+        <ContactForm />
       </main>
+      <Footer />
     </div>
   );
 };
