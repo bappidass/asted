@@ -27,7 +27,7 @@ const Header = () => {
             <a href="#tenders" className="font-work-sans hover:opacity-80 transition-opacity">
               TENDERS
             </a>
-            <a href="#career" className="font-work-sans hover:opacity-80 transition-opacity">
+            <a href="/careers" className="font-work-sans hover:opacity-80 transition-opacity">
               CAREER
             </a>
             <Button variant="white-outline" size="sm">
