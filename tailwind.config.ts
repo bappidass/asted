@@ -17,16 +17,7 @@ export default {
         'work-sans': ['Work Sans', 'sans-serif'],
         'oswald': ['Oswald', 'sans-serif'],
       },
-      fontSize: {
-        'hero': ['96px', { lineHeight: '1', fontWeight: '700' }],
-        'section-header': ['48px', { lineHeight: '1.2', fontWeight: '700' }],
-        'cta': ['40px', { lineHeight: '1.2', fontWeight: '600' }],
-        'card-header': ['32px', { lineHeight: '1.3', fontWeight: '700' }],
-        'stats': ['64px', { lineHeight: '1', fontWeight: '700' }],
-        'stories-header': ['40px', { lineHeight: '1.2', fontWeight: '700' }],
-        'body': ['20px', { lineHeight: '1.6', fontWeight: '400' }],
-        'body-small': ['16px', { lineHeight: '1.5', fontWeight: '400' }],
-      },
+      /* fontSize removed per request – use utility classes in src/index.css (text-hero, text-section-header, etc.) */
       colors: {
         // Brand colors
         brand: {

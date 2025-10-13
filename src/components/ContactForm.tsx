@@ -6,8 +6,8 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
+import AstedLogoBlack  from "@/assets/AstedLogoBlack.svg";
 
-// Validation schema following security best practices
 const contactSchema = z.object({
   name: z.string()
     .trim()
@@ -60,8 +60,6 @@ const ContactForm = () => {
 
   const onSubmit = async (data: ContactFormData) => {
     try {
-      // Here you would typically send the data to your backend
-      // For now, we'll just show a success message
       console.log("Form submitted with validated data:", data);
       
       toast({
@@ -83,30 +81,24 @@ const ContactForm = () => {
   const educationValue = watch("education");
 
   return (
-    <section id="contact" className="py-20 bg-brand-light-gray">
-      <div className="container mx-auto px-6 max-w-6xl">
+    <section id="contact" className="py-6 bg-background">
+      <div className="container mx-auto">
         <div className="bg-background border-2 border-primary rounded-lg overflow-hidden">
-          <div className="p-12">
-            <div className="flex justify-between items-start mb-12">
-              <h2 className="font-oswald font-bold text-section-header text-primary">
+          <div className="p-4">
+            <div className="flex justify-between items-center ">
+              <h2 className="font-oswald  md:font-bold text-section-header text-primary">
                 GET IN TOUCH
               </h2>
               
-              {/* Logo */}
               <div className="flex items-center space-x-2">
-                <div className="bg-accent w-10 h-10 rounded flex items-center justify-center">
-                  <span className="text-primary font-oswald font-bold text-xl">A</span>
-                </div>
-                <div>
-                  <h3 className="font-oswald font-bold text-2xl text-foreground">asted</h3>
-                  <p className="text-xs text-foreground opacity-70 tracking-wider">WE ARE HERE</p>
+                <div className=" w-auto h-44 rounded flex items-center justify-center">
+                 <img src={AstedLogoBlack} alt="" />
                 </div>
               </div>
             </div>
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
-                {/* Name Field */}
                 <div className="space-y-2">
                   <label className="font-work-sans font-semibold text-foreground">
                     Name
@@ -121,7 +113,6 @@ const ContactForm = () => {
                   )}
                 </div>
 
-                {/* Message Field */}
                 <div className="space-y-2 md:row-span-3">
                   <label className="font-work-sans font-semibold text-foreground">
                     Message (Optional)
@@ -136,7 +127,6 @@ const ContactForm = () => {
                   )}
                 </div>
 
-                {/* Phone Field */}
                 <div className="space-y-2">
                   <label className="font-work-sans font-semibold text-foreground">
                     Phone No.
@@ -151,7 +141,6 @@ const ContactForm = () => {
                   )}
                 </div>
 
-                {/* Education Field */}
                 <div className="space-y-2">
                   <label className="font-work-sans font-semibold text-foreground">
                     Educational Qualification
@@ -174,7 +163,6 @@ const ContactForm = () => {
                   )}
                 </div>
 
-                {/* Email Field */}
                 <div className="space-y-2">
                   <label className="font-work-sans font-semibold text-foreground">
                     Email (Optional)
@@ -190,7 +178,6 @@ const ContactForm = () => {
                   )}
                 </div>
 
-                {/* Address Field */}
                 <div className="space-y-2">
                   <label className="font-work-sans font-semibold text-foreground">
                     Address

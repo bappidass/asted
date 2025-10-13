@@ -1,30 +1,32 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import astedLogo from "@/assets/asted-logo.png";
-
+import { useNavigate } from "react-router-dom";
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <header className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center" onClick={()=>{navigate('/')}}>
             <img src={astedLogo} alt="Asted - We Are Here" className="h-12" />
           </div>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-12">
-            <a href="#about" className="font-work-sans text-white hover:opacity-80 transition-opacity text-sm tracking-wide">
+            <Link to="#about" className="font-work-sans text-white hover:opacity-80 transition-opacity text-sm tracking-wide">
               ABOUT US
-            </a>
-            <a href="#works" className="font-work-sans text-white hover:opacity-80 transition-opacity text-sm tracking-wide">
+            </Link>
+            <Link to="#works" className="font-work-sans text-white hover:opacity-80 transition-opacity text-sm tracking-wide">
               OUR WORKS
-            </a>
-            <a href="#tenders" className="font-work-sans text-white hover:opacity-80 transition-opacity text-sm tracking-wide">
+            </Link>
+            <Link to="#tenders" className="font-work-sans text-white hover:opacity-80 transition-opacity text-sm tracking-wide">
               TENDERS
-            </a>
-            <a href="/careers" className="font-work-sans text-white hover:opacity-80 transition-opacity text-sm tracking-wide">
+            </Link>
+            <Link to="/careers" className="font-work-sans text-white hover:opacity-80 transition-opacity text-sm tracking-wide">
               CAREER
-            </a>
+            </Link>
             <Button className="bg-accent hover:bg-accent/90 text-white font-work-sans font-semibold text-sm px-8 py-2 tracking-wide">
               CONTACT
             </Button>

@@ -105,3 +105,41 @@ All colors MUST be HSL format and match the brand specification.
     @apply bg-background text-foreground;
   }
 }
+
+/* Custom font-size utilities moved from tailwind.config.ts
+   Use classes like: text-hero, text-section-header, text-cta, text-card-header,
+   text-stats, text-stories-header, text-body, text-body-small
+*/
+@layer utilities {
+  /* Use Tailwind utilities so these classes can be combined with other Tailwind classes
+     Requires Tailwind JIT (arbitrary values like text-[96px], leading-[1] are supported)
+  */
+  .text-hero {
+    @apply text-[96px] leading-[1] font-bold;
+  }
+.text-section-header {
+  @apply text-[28px] sm:text-[32px] md:text-[40px] lg:text-[48px] 
+         leading-[1.2] font-bold;
+}
+
+  .text-cta {
+    @apply text-[40px] leading-[1.2] font-semibold;
+  }
+  .text-card-header {
+    @apply text-[32px] leading-[1.3] font-bold;
+  }
+  .text-stats {
+    @apply text-[64px] leading-[1] font-bold;
+  }
+  .text-stories-header {
+    @apply text-[40px] leading-[1.2] font-bold;
+  }
+.text-body {
+  @apply text-[16px] sm:text-[18px]
+         leading-[1.6] font-normal;
+}
+
+  .text-body-small {
+    @apply text-[16px] leading-[20px] font-normal;
+  }
+}
