@@ -10,7 +10,7 @@ const Hero = () => {
           alt="Community hands joining together" 
           className="w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary from-50% to-transparent to-50%"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/69 from-50% to-transparent to-50%"></div>
       </div>
 
       {/* Content */}
