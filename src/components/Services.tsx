@@ -1,7 +1,7 @@
 import Agriculture from "../assets/agriculture.svg";
-import education from "../assets/education.svg";
-import environment from "../assets/environment.svg";
-import livelihood from "../assets/livelihood.svg";
+import education from "../assets/Education.svg";
+import environment from "../assets/Environment.svg";
+import livelihood from "../assets/Livelihood.svg";
 const Services = () => {
   const services = [
     {
