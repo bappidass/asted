@@ -53,7 +53,7 @@ const Careers = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${careersHero})` }}
         >
-          <div className="absolute inset-0 bg-primary/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/50 to-transparent"></div>
         </div>
         <div className="relative container mx-auto px-6 h-full flex flex-col justify-center items-center text-center">
           <p className="text-brand-white font-work-sans text-sm tracking-wider mb-4 opacity-90">
