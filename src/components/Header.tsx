@@ -1,36 +1,31 @@
 import { Button } from "@/components/ui/button";
+import astedLogo from "@/assets/asted-logo.png";
 
 const Header = () => {
   return (
     <header className="bg-primary text-primary-foreground">
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-6 py-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="bg-accent w-10 h-10 rounded flex items-center justify-center">
-              <span className="text-primary font-oswald font-bold text-xl">A</span>
-            </div>
-            <div>
-              <h1 className="font-oswald font-bold text-2xl">asted</h1>
-              <p className="text-xs opacity-90 tracking-wider">WE ARE HERE</p>
-            </div>
+          <div className="flex items-center">
+            <img src={astedLogo} alt="Asted - We Are Here" className="h-12" />
           </div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="font-work-sans hover:opacity-80 transition-opacity">
+          <nav className="hidden md:flex items-center space-x-12">
+            <a href="#about" className="font-work-sans text-white hover:opacity-80 transition-opacity text-sm tracking-wide">
               ABOUT US
             </a>
-            <a href="#works" className="font-work-sans hover:opacity-80 transition-opacity">
+            <a href="#works" className="font-work-sans text-white hover:opacity-80 transition-opacity text-sm tracking-wide">
               OUR WORKS
             </a>
-            <a href="#tenders" className="font-work-sans hover:opacity-80 transition-opacity">
+            <a href="#tenders" className="font-work-sans text-white hover:opacity-80 transition-opacity text-sm tracking-wide">
               TENDERS
             </a>
-            <a href="/careers" className="font-work-sans hover:opacity-80 transition-opacity">
+            <a href="/careers" className="font-work-sans text-white hover:opacity-80 transition-opacity text-sm tracking-wide">
               CAREER
             </a>
-            <Button variant="white-outline" size="sm">
+            <Button className="bg-accent hover:bg-accent/90 text-white font-work-sans font-semibold text-sm px-8 py-2 tracking-wide">
               CONTACT
             </Button>
           </nav>
