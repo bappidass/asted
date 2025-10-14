@@ -18,10 +18,10 @@ const Header = () => {
             <Link to="#about" className="font-work-sans text-white hover:opacity-80 transition-opacity text-sm tracking-wide">
               ABOUT US
             </Link>
-            <Link to="#works" className="font-work-sans text-white hover:opacity-80 transition-opacity text-sm tracking-wide">
+            <Link to="/work-Details" className="font-work-sans text-white hover:opacity-80 transition-opacity text-sm tracking-wide">
               OUR WORKS
             </Link>
-            <Link to="#tenders" className="font-work-sans text-white hover:opacity-80 transition-opacity text-sm tracking-wide">
+            <Link to="/tenders" className="font-work-sans text-white hover:opacity-80 transition-opacity text-sm tracking-wide">
               TENDERS
             </Link>
             <Link to="/careers" className="font-work-sans text-white hover:opacity-80 transition-opacity text-sm tracking-wide">

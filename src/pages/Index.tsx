@@ -13,9 +13,9 @@ import SocialMediaOutreach from "@/components/SocialOutreachComponent";
 const Index = () => {
   return (
     <div className="min-h-screen">
-      {/* <Header /> */}
+      <Header />
       <main>
-        {/* <Hero /> */}
+        <Hero />
         <About />
         <Services />
         <ImpactStories />

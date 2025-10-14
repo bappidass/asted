@@ -86,7 +86,7 @@ const SocialOutreachComponent = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="font-oswald font-bold text-stories-header text-primary mb-6">
-              SOCIAL MEDIA OUTREACH
+              SOCIAL MEDIA COVARGE
             </h2>
        
           </div>
