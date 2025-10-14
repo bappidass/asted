@@ -1,25 +1,19 @@
+import staticbg from "../assets/static.png";
+
 const Statistics = () => {
   const stats = [
-    {
-      number: "10+",
-      label: "CURRENT PROJECTS"
-    },
-    {
-      number: "3", 
-      label: "DISTRICTS COVERED"
-    },
-    {
-      number: "1000+",
-      label: "HOUSEHOLDS HELPED"
-    }
+    { number: "10+", label: "CURRENT PROJECTS" },
+    { number: "3", label: "DISTRICTS COVERED" },
+    { number: "1000+", label: "HOUSEHOLDS HELPED" },
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-r from-primary/69 from-50% to-transparent to-50% text-primary-foreground relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-transparent to-primary/30"></div>
-      </div>
+    <section
+      className="py-20 text-primary-foreground relative overflow-hidden bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${staticbg})` }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-[#000080B2] opacity-70"></div>
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-3 gap-12 text-center">

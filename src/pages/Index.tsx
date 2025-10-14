@@ -8,19 +8,23 @@ import Donation from "@/components/Donation";
 import NewsEvents from "@/components/NewsEvents";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
-
+import DonarStories from "@/components/ourDonars";
+import SocialMediaOutreach from "@/components/SocialOutreachComponent";
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Header />
+      {/* <Header /> */}
       <main>
         {/* <Hero /> */}
-        {/* <About /> */}
+        <About />
         <Services />
         <ImpactStories />
-        {/* <Statistics /> */}
+ 
         <Donation />
+          <DonarStories />
+                 <Statistics />
         <NewsEvents />
+        <SocialMediaOutreach />
         <ContactForm />
       </main>
       <Footer />

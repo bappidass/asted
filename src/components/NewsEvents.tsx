@@ -34,7 +34,7 @@ const NewsEvents = () => {
   return (
     <section className="py-6 bg-background">
       <div className="container mx-auto px-6">
-        <h2 className="font-oswald font-bold text-stories-header text-primary mb-16">
+        <h2 className="font-oswald font-bold text-stories-header text-primary mb-6">
           NEWS AND EVENTS
         </h2>
 
