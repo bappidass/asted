@@ -13,7 +13,6 @@ const Donation = () => {
       <div className="container mx-auto px-6">
         <div className="bg-brand-light-gray border-2 border-primary rounded-lg overflow-hidden">
           <div className="grid lg:grid-cols-2">
-            {/* Left Side - Content */}
             <div className="bg-primary text-primary-foreground p-6 space-y-8">
               <div>
                 <div className="flex items-center ">
@@ -38,7 +37,6 @@ const Donation = () => {
               </div>
             </div>
 
-            {/* Right Side - Donation Form */}
             <div className="bg-background p-6 space-y-8">
               <h3 className="font-oswald font-bold text-section-header text-primary text-center">
                 MAKE A MONTHLY DONATION
@@ -50,7 +48,6 @@ const Donation = () => {
                     Select Amount:
                   </p>
 
-                  {/* Amount Selection */}
                   <div className="grid grid-cols-3 gap-3 mb-6">
                     {predefinedAmounts.map((amount) => (
                       <button
@@ -70,8 +67,7 @@ const Donation = () => {
                   </div>
 
                   <p className="text-center font-work-sans text-foreground mb-4">OR</p>
-
-                  {/* Custom Amount */}
+                  
                   <div className="flex items-center border-2 border-muted focus-within:border-primary">
                     <span className="px-4 py-3 bg-muted font-oswald font-semibold">₹</span>
                     <Input

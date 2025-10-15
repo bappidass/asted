@@ -7,6 +7,9 @@ import Index from "./pages/Index";
 import Careers from "./pages/Careers";
 import Tender from "./pages/Tenders.tsx";
 import WorkDeatils from "./pages/workDeatils.tsx";
+import RefundPolicy from "./pages/RefundPolicy.tsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
+import TermsAndConditions from "./pages/TermsAndConditions.tsx";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,7 +25,9 @@ const App = () => (
           <Route path="/careers" element={<Careers />} />
           <Route path="/tenders" element={<Tender />} />
           <Route path="/work-Details" element={<WorkDeatils/>} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/refund-policy" element={<RefundPolicy/>} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

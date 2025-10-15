@@ -63,7 +63,6 @@ const Services = () => {
                     : ""
                 }`}
               >
-                {/* Icon */}
                 <div
                   className={`flex justify-center transition-all duration-500 ${
                     !isEducation
@@ -77,8 +76,6 @@ const Services = () => {
                     className="w-16 h-16 object-contain transition-all duration-500"
                   />
                 </div>
-
-                {/* SDG Image */}
                 <div
                   className={`flex justify-center transition-opacity duration-500 ${
                     !isEducation ? "group-hover:opacity-0" : ""
@@ -90,8 +87,6 @@ const Services = () => {
                     className="transition-all duration-500"
                   />
                 </div>
-
-                {/* Title */}
                 <h3
                   className={`font-oswald font-bold text-card-header transition-colors duration-500 ${
                     isEducation
@@ -101,8 +96,6 @@ const Services = () => {
                 >
                   {service.title}
                 </h3>
-
-                {/* Description */}
                 <p
                   className={`font-work-sans text-body-small leading-relaxed transition-colors duration-500 ${
                     isEducation

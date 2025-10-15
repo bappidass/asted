@@ -42,7 +42,6 @@ const DonarStories = () => {
                 </h2>
 
                 <div className="relative">
-                    {/* Navigation Buttons */}
                     <button className="donors-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 -ml-4 lg:-ml-12">
                         <ChevronLeft className="w-12 h-12 text-primary hover:text-primary bg-white rounded-full shadow-lg transition-colors" />
                     </button>
@@ -73,7 +72,6 @@ const DonarStories = () => {
                         {testimonials.map((testimonial) => (
                             <SwiperSlide key={testimonial.id}>
                                 <div className="flex flex-col-reverse md:flex-row  gap-2 lg:gap-16 items-center">
-                                    {/* Content */}
                                     <div className="space-y-6">
                                         <h3 className="font-oswald font-bold text-[18px] lg:text-card-header text-foreground">
                                             {testimonial.quote}
@@ -96,19 +94,12 @@ const DonarStories = () => {
                                             alt={`${testimonial.name} testimonial`}
                                             className="w-full h-full object-cover"
                                         />
-
-
                                         <div className="absolute top-0 right-0 h-full w-1/3 bg-[#000080B2] opacity-75"></div>
-
-
                                     </div>
-
                                 </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
-
-                    {/* Pagination Dots */}
                     <div className="donors-pagination flex justify-center mt-12 space-x-3"></div>
                 </div>
             </div>

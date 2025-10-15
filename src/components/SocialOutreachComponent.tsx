@@ -88,10 +88,8 @@ const SocialOutreachComponent = () => {
             <h2 className="font-oswald font-bold text-stories-header text-primary mb-6">
               SOCIAL MEDIA COVARGE
             </h2>
-       
           </div>
 
-          {/* Grid Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {socialOutreachs.map((post) => (
               <div
@@ -99,9 +97,6 @@ const SocialOutreachComponent = () => {
                 onClick={() => openPopup(post)}
                 className="bg-white rounded-xl shadow-sm border  overflow-hidden hover:shadow-lg transition-all duration-300 cursor-pointer transform hover:-translate-y-1 group"
               >
-                
-
-                {/* Image */}
                 <div className="relative">
                   <img
                     src={post.image}
@@ -110,8 +105,6 @@ const SocialOutreachComponent = () => {
                   />
                   
                 </div>
-
-                {/* Content */}
                 <div className="p-4">
                   <div className=" text-primary  py-1.5 sm:py-2 font-oswald font-semibold text-xs sm:text-sm">
                     {formatDate(post.date)}
@@ -120,10 +113,6 @@ const SocialOutreachComponent = () => {
                   <p className="text-body font-oswald mb-3 leading-relaxed line-clamp-4">
                     {truncateText(post.msg)}
                   </p>
-
-                
-
-                  {/* Stats */}
                   <div className="flex justify-between items-center text-xs text-[hsl(var(--brand-dark))]/60">
                     <div className="flex items-center gap-1">
                       <Heart className="w-3 h-3" />
@@ -141,7 +130,6 @@ const SocialOutreachComponent = () => {
         </div>
       </div>
 
-      {/* Popup */}
       {selectedPost && (
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-[hsl(var(--brand-white))] rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden shadow-2xl">
@@ -166,8 +154,6 @@ const SocialOutreachComponent = () => {
                 <p className="text-base font-oswald  mb-6 leading-relaxed">
                   {selectedPost.msg}
                 </p>
-
-                
 
                 <div className="flex items-center justify-between pt-4 border-t border-[hsl(var(--brand-light-gray))]">
                   <div className="flex items-center gap-6 text-sm text-[hsl(var(--brand-dark))]/70">

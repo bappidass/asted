@@ -12,9 +12,7 @@ const Statistics = () => {
       className="py-20 text-primary-foreground relative overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${staticbg})` }}
     >
-      {/* Overlay */}
       <div className="absolute inset-0 bg-[#000080] opacity-70"></div>
-
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-3 gap-12 text-center">
           {stats.map((stat, index) => (

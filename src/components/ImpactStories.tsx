@@ -41,15 +41,12 @@ const ImpactStories = () => {
   return (
     <section className="py-6 bg-background relative">
       <div className="container mx-auto px-6 relative">
-        {/* Navigation Buttons */}
         <button className="donors-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10  ">
           <ChevronLeft className="w-12 h-12 text-primary hover:text-primary bg-white rounded-full shadow-lg transition-colors" />
         </button>
         <button className="donors-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10  ">
           <ChevronRight className="w-12 h-12 text-primary hover:text-primary bg-white rounded-full shadow-lg transition-colors" />
         </button>
-
-        {/* Swiper */}
         <Swiper
           modules={[Autoplay, Navigation, Pagination]}
           spaceBetween={30}
@@ -73,7 +70,6 @@ const ImpactStories = () => {
           {stories.map((story) => (
             <SwiperSlide key={story.id}>
               <div className="grid lg:grid-cols-2 gap-4 md:gap-16 items-center">
-                {/* Image */}
                 <div>
                   <img
                     src={story.image}
@@ -82,7 +78,6 @@ const ImpactStories = () => {
                   />
                 </div>
 
-                {/* Content */}
                 <div className="space-y-2 md:space-y-8">
                   <div>
                     <h2 className="font-oswald font-bold text-stories-header text-primary mb-2">
@@ -99,26 +94,25 @@ const ImpactStories = () => {
                       {story.description}
                     </p>
 
-                    <div className="space-y-2">
-                      <p className="font-oswald font-bold text-lg text-foreground">
-                        {story.author}
-                      </p>
-                      <p className="font-work-sans text-primary">
-                        {story.location}
-                      </p>
+                    <div className='flex  items-end justify-between   '>
+                      <div className="space-y-2">
+                        <p className="font-oswald font-bold text-lg text-foreground">
+                          {story.author}
+                        </p>
+                        <p className="font-work-sans text-primary">
+                          {story.location}
+                        </p>
+                      </div>
+                      <Button variant="cta" size="cta">
+                        READ MORE
+                      </Button>
                     </div>
                   </div>
-
-                  <Button variant="cta" size="cta">
-                    READ MORE
-                  </Button>
                 </div>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-
-        {/* Pagination Dots */}
         <div className="donors-pagination flex justify-center mt-12 space-x-3"></div>
       </div>
     </section>

@@ -1,8 +1,4 @@
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Agri1 from "@/assets/Agri1.png";
 import Agri2 from "@/assets/Agri2.png";
 import Agri3 from "@/assets/Agri3.png";
@@ -29,14 +25,14 @@ const WorkDeatils = () => {
         },
 
         visionsGoalsImpact: {
-            title: "Visions, Goals and Impact",
+
             goals: [
                 "To promote sustainable and eco-friendly farming practices.",
                 "To provide alternative income sources for rural farmers.",
                 "To preserve and promote indigenous knowledge of medicinal plants.",
                 "To create market linkages for fair trade opportunities."
             ],
-            sideImage: { src: "sideImage.jpg", alt: "Farmer working in field" }
+            sideImage: { src: Agri1, alt: "Farmer working in field" }
         },
 
         impactHighlights: [
@@ -103,7 +99,6 @@ const WorkDeatils = () => {
                     className="absolute inset-0 bg-cover bg-center"
                     style={{ backgroundImage: `url(${Agri1})` }}
                 >
-
                     <div className="absolute top-0 left-0 h-full w-1/2 bg-[#000080] opacity-[69%]"></div>
                 </div>
                 <div className="relative container mx-auto px-6 h-full flex flex-col justify-center items-center text-center">
@@ -118,7 +113,7 @@ const WorkDeatils = () => {
 
 
             <section className="py-6 ">
-                <div className="flex flex-col items-center gap-10 container mx-auto px-4">
+                <div className="flex flex-col items-center gap-10 container mx-auto ">
                     <div className="flex flex-col items-center gap-10">
                         <h2 className="font-oswald font-bold text-section-header text-center text-primary  uppercase">
                             {workdetailsData.heroSection.title || ''}
@@ -135,15 +130,45 @@ const WorkDeatils = () => {
                                     alt={workdetailsData.heroSection.images[0].alt}
                                     className="h-[100px] w-[100px] sm:h-[200px] sm:w-[200px] md:h-[250px] md:w-[250] lg:w-[400px] lg:h-[400px] object-cover"
                                 />
-                                <div className="absolute top-0 left-0 h-full w-1/3 bg-[#000080B2] opacity-75"></div>
+                                <div className="absolute top-0 left-0 h-full w-1/3 bg-[#000080] opacity-75"></div>
                             </div>
 
                             <img src={workdetailsData.heroSection.images[1].src} alt={workdetailsData.heroSection.images[1].alt} className="h-[100px] w-[100px] sm:h-[200px] sm:w-[200px] md:h-[250px] md:w-[250] lg:w-[400px] lg:h-[400px] object-cover" />
                             <img src={workdetailsData.heroSection.images[2].src} alt={workdetailsData.heroSection.images[2].alt} className="h-[100px] w-[100px] sm:h-[200px] sm:w-[200px] md:h-[250px] md:w-[250] lg:w-[400px] lg:h-[400px] object-cover" />
                         </div>
-
-
                     </div>
+
+                    <div className="bg-primary w-full p-6 sm:p-8">
+                        <h2 className="font-oswald font-bold text-section-header text-white uppercase text-center sm:text-left">
+                            VISIONS, GOALS AND IMPACT
+                        </h2>
+
+                        <div className="flex flex-col-reverse lg:flex-row justify-center py-8 lg:py-10 gap-6 lg:gap-0">
+                            <div className="w-full lg:w-3/4 flex flex-col text-black justify-start items-start gap-4">
+                                {workdetailsData.visionsGoalsImpact.goals.map((goal, index) => (
+                                    <div
+                                        key={index}
+                                        className="relative bg-white py-3 px-4 w-full rounded-md shadow-sm"
+                                    >
+                                        <div className="absolute left-0 top-0 bottom-0 w-[50px] sm:w-[60px] bg-[#000080] opacity-75 z-10 rounded-l-md"></div>
+                                        <p className="ml-16 sm:ml-20 font-work-sans text-body text-foreground leading-relaxed text-start relative z-20">
+                                            {goal}
+                                        </p>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="w-full lg:w-1/4 h-56 sm:h-72 lg:h-[260px] relative">
+                                <img
+                                    src={workdetailsData.visionsGoalsImpact.sideImage.src}
+                                    alt="vision-side"
+                                    className="w-full h-full object-cover rounded-md"
+                                />
+                                <div className="absolute bottom-0 w-full h-full bg-[#000080] opacity-40 z-10 rounded-md"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div>
                         <div className="grid md:grid-cols-2 xl:grid-cols-4 ">
                             {workdetailsData.impactHighlights.map((impact, index) => (
@@ -155,13 +180,6 @@ const WorkDeatils = () => {
                                             : "bg-white text-primary"
                                         }`}
                                 >
-                                    <div className="flex justify-center mb-6">
-                                        <img
-                                            src={impact.icon}
-                                            alt={impact.title}
-                                            className="w-16 h-16 object-contain"
-                                        />
-                                    </div>
                                     <h3 className="font-oswald text-card-header uppercase font-bold text-xl mb-3">
                                         {impact.title}
                                     </h3>
@@ -172,7 +190,8 @@ const WorkDeatils = () => {
                             ))}
                         </div>
                     </div>
-                    <div className="flex flex-col  gap-10">
+
+                    <div className="flex flex-col   gap-10">
                         <h2 className="font-oswald font-bold text-section-header text-center text-primary  uppercase">
                             beneficiaries
                         </h2>
@@ -183,8 +202,8 @@ const WorkDeatils = () => {
                                     alt={workdetailsData.beneficiaries.groups[0].alt}
                                     className=" md:h-[250px] md:w-[250] lg:w-[400px] lg:h-[400px] object-cover"
                                 />
-                                 <div className="absolute bottom-0 w-full h-10  md:h-24 bg-[#000080] opacity-75 z-10 flex items-center justify-center">
-                                     <h3 className=" font-oswald text-white text-center text-card-header uppercase font-bold ">
+                                <div className="absolute bottom-0 w-full h-10   md:h-28 bg-[#000080] opacity-75 z-10 flex items-center justify-center">
+                                    <h3 className=" font-oswald text-white text-center text-card-header uppercase font-bold ">
                                         {workdetailsData.beneficiaries.groups[0].name}
                                     </h3>
                                 </div>
@@ -193,10 +212,10 @@ const WorkDeatils = () => {
                                 <img
                                     src={workdetailsData.beneficiaries.groups[1].image}
                                     alt={workdetailsData.beneficiaries.groups[1].alt}
-                                    className=" md:h-[320px] md:w-[250] lg:w-[400px] lg:h-[470px] object-cover"
+                                    className=" md:h-[320px] md:w-[250] lg:w-[400px] lg:h-[495px] object-cover"
                                 />
-                                <div className="absolute bottom-0 w-full h-10  md:h-24 bg-[#000080] opacity-75 z-10 flex items-center justify-center">
-                                     <h3 className=" font-oswald text-white text-center text-card-header uppercase font-bold ">
+                                <div className="absolute bottom-0 w-full h-10   md:h-28 bg-[#000080] opacity-75 z-10 flex items-center justify-center">
+                                    <h3 className=" font-oswald text-white text-center text-card-header uppercase font-bold ">
                                         {workdetailsData.beneficiaries.groups[1].name}
                                     </h3>
                                 </div>
@@ -207,8 +226,8 @@ const WorkDeatils = () => {
                                     alt={workdetailsData.beneficiaries.groups[2].alt}
                                     className=" md:h-[250px] md:w-[250] lg:w-[400px] lg:h-[400px] object-cover"
                                 />
-                                <div className="absolute bottom-0 w-full h-10  md:h-24 bg-[#000080] opacity-75 z-10 flex items-center justify-center">
-                                     <h3 className=" font-oswald text-white text-center text-card-header uppercase font-bold ">
+                                <div className="absolute bottom-0 w-full h-10   md:h-28 bg-[#000080] opacity-75 z-10 flex items-center justify-center">
+                                    <h3 className=" font-oswald text-white text-center text-card-header uppercase font-bold ">
                                         {workdetailsData.beneficiaries.groups[2].name}
                                     </h3>
                                 </div>
@@ -217,15 +236,30 @@ const WorkDeatils = () => {
                                 <img
                                     src={workdetailsData.beneficiaries.groups[3].image}
                                     alt={workdetailsData.beneficiaries.groups[3].alt}
-                                    className="md:h-[320px] md:w-[250] lg:w-[400px] lg:h-[470px] object-cover"
+                                    className="md:h-[320px] md:w-[250] lg:w-[400px] lg:h-[495px] object-cover"
                                 />
-                                <div className="absolute bottom-0 w-full h-10 md:h-24 bg-[#000080] opacity-75 z-10 flex items-center justify-center">
-                                     <h3 className=" font-oswald text-white text-center text-card-header uppercase font-bold ">
+                                <div className="absolute bottom-0 w-full h-10  md:h-28 bg-[#000080] opacity-75 z-10 flex items-center justify-center">
+                                    <h3 className=" font-oswald text-white text-center text-card-header uppercase font-bold ">
                                         {workdetailsData.beneficiaries.groups[3].name}
                                     </h3>
                                 </div>
                             </div>
                         </div>
+                    </div>
+
+                    <div className="flex flex-col md:w-1/2 mt-20  gap-10">
+                        <p className="font-work-sans text-body text-foreground leading-relaxed text-center">
+                            Join us in empowering farmers and preserving nature’s pharmacy. Together, we can create a healthier and more sustainable future
+                        </p>
+                        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10 w-full">
+                            <button className="bg-primary text-white py-3 px-6 font-work-sans font-bold w-full sm:w-auto">
+                                DONATE NOW
+                            </button>
+                            <button className="text-primary bg-white border-2 border-primary py-3 px-6 font-work-sans font-bold w-full sm:w-auto">
+                                PARTNER WITH US
+                            </button>
+                        </div>
+
                     </div>
                 </div>
             </section>
