@@ -32,7 +32,7 @@ const Tenders = () => {
                 "Valid MSME or ISO certification",
                 "Strong technical manpower base",
             ],
-            tenderId: "ASTED/2025/TND/002",
+            tenderId: "ASTED/2025/TND/0",
             lastDate: "OCTOBER 30, 2025",
             estimatedValue: "₹40,00,000",
             status: "Active",
