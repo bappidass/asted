@@ -21,7 +21,7 @@ const navigation = [
   },
   { label: "TENDERS", to: "/tenders" },
   { label: "CAREERS", to: "/careers" },
-  { label: "NEWS", to: "/news" },
+  { label: "NEWS", to: "/news-details" },
 ];
 
 

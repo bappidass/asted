@@ -8,7 +8,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2  items-center gap-4 md:gap-0">
 
           <div className="flex space-y-8">
-            <div className="w-1/3 relative ">
+            <div className=" sm:w-1/3 relative ">
               <img
                 src={charityManImage}
                 alt="Indigenous community member"
@@ -30,7 +30,7 @@ const About = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col items-end sm:flex-row gap-4 p-2">
                 <Button variant="cta" size="cta">
                   JOIN NOW
                 </Button>
@@ -49,7 +49,7 @@ const About = () => {
               better Education, Environmental Design, and stronger Livelihood cultural
               preservation and pathways to inclusive development.
             </p>
-            <Button variant="white-outline" size="cta">
+            <Button variant="white-outline" size="cta" >
               DONATE NOW
             </Button>
           </div>
