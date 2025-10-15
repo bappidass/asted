@@ -247,7 +247,7 @@ const WorkDeatils = () => {
                         </div>
                     </div>
 
-                    <div className="flex flex-col md:w-1/2 mt-20  gap-10">
+                    <div className="flex flex-col md:w-1/2 mt-20 container gap-10">
                         <p className="font-work-sans text-body text-foreground leading-relaxed text-center">
                             Join us in empowering farmers and preserving nature’s pharmacy. Together, we can create a healthier and more sustainable future
                         </p>
