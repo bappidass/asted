@@ -1,21 +1,22 @@
 import { Button } from "@/components/ui/button";
-import charityManImage from "@/assets/charity-man.png";
+import charityManImage from "@/assets/aspiration.png";
 
 const About = () => {
   return (
-    <section id="about" className="py-8 md:py-0 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="about" className="mt-6 md:mt-0 md:py-0 bg-background">
+      <div className="mx-auto ">
         <div className="grid lg:grid-cols-2  items-center gap-4 md:gap-0">
 
           <div className="flex space-y-8">
-            {/* <div className="w-1/3 ">
+            <div className="w-1/3 relative ">
               <img
                 src={charityManImage}
                 alt="Indigenous community member"
-                className="w-full h-98 rounded-lg shadow-lg"
+                className="w-[300px] h-[380px] absolute sm:top-[-80px] z-10"
+             
               />
-            </div> */}
-            <div className="w-full">
+            </div>
+            <div className="w-full p-2 sm:p-0">
 
               <h2 className="font-oswald font-bold text-section-header text-primary mb-6">
                 ASPIRATION CHARITY

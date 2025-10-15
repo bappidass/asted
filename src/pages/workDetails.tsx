@@ -1,4 +1,4 @@
-import Footer from "@/components/Footer";
+
 import Agri1 from "@/assets/Agri1.png";
 import Agri2 from "@/assets/Agri2.png";
 import Agri3 from "@/assets/Agri3.png";
@@ -112,9 +112,9 @@ const WorkDeatils = () => {
             </section>
 
 
-            <section className="py-6 ">
-                <div className="flex flex-col items-center gap-10 container mx-auto ">
-                    <div className="flex flex-col items-center gap-10">
+            <section className="py-6  ">
+                <div className="flex flex-col items-center gap-10  mx-auto ">
+                    <div className="flex flex-col items-center gap-10 container ">
                         <h2 className="font-oswald font-bold text-section-header text-center text-primary  uppercase">
                             {workdetailsData.heroSection.title || ''}
                         </h2>
@@ -191,7 +191,7 @@ const WorkDeatils = () => {
                         </div>
                     </div>
 
-                    <div className="flex flex-col   gap-10">
+                    <div className="flex flex-col container  gap-10">
                         <h2 className="font-oswald font-bold text-section-header text-center text-primary  uppercase">
                             beneficiaries
                         </h2>
@@ -264,7 +264,7 @@ const WorkDeatils = () => {
                 </div>
             </section>
 
-            <Footer />
+ 
         </div>
     );
 };

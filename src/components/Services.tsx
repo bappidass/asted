@@ -8,11 +8,16 @@ import AgricultureSDG from "../assets/AgricultureSDGs.png";
 import LivelihoodSDG from "../assets/LivelihoodSDGs.png";
 import EnvironmentSDG from "../assets/EnvironmentSDGs.png";
 
+import AgricultureWhiteLogo from "../assets/AgricultureWhiteLogo.png";
+import LivelihoodWhiteLogo from "../assets/Livelihoodlogowhite.png";
+import EnvironmentWhiteLogo from "../assets/Environmentlogowhite.png";
+
 const Services = () => {
   const services = [
     {
       title: "AGRICULTURE",
       SVG: Agriculture,
+      hoverSVG: AgricultureWhiteLogo,
       SDG: AgricultureSDG,
       bgColor: "bg-background",
       textColor: "text-primary",
@@ -31,6 +36,7 @@ const Services = () => {
     {
       title: "ENVIRONMENT",
       SVG: environment,
+      hoverSVG: EnvironmentWhiteLogo,
       SDG: EnvironmentSDG,
       bgColor: "bg-background",
       textColor: "text-primary",
@@ -40,6 +46,7 @@ const Services = () => {
     {
       title: "LIVELIHOOD",
       SVG: livelihood,
+      hoverSVG: LivelihoodWhiteLogo,
       SDG: LivelihoodSDG,
       bgColor: "bg-background",
       textColor: "text-primary",
@@ -63,22 +70,25 @@ const Services = () => {
                     : ""
                 }`}
               >
-                <div
-                  className={`flex justify-center transition-all duration-500 ${
-                    !isEducation
-                      ? "group-hover:bg-white group-hover:border group-hover:border-white group-hover:rounded-full group-hover:p-3"
-                      : ""
-                  }`}
-                >
+                <div className="flex justify-center relative w-full min-h-[64px]">
+                  {/* Default SVG */}
                   <img
                     src={service.SVG}
                     alt={service.title}
-                    className="w-16 h-16 object-contain transition-all duration-500"
+                    className={`w-16 h-16 object-contain transition-all duration-500 ${service.hoverSVG ? 'absolute left-1/2 -translate-x-1/2 top-0 group-hover:opacity-0' : ''}`}
                   />
+                  {/* Hover SVG (if present) */}
+                  {service.hoverSVG && (
+                    <img
+                      src={service.hoverSVG}
+                      alt={service.title + ' hover'}
+                      className="w-16 h-16 object-contain transition-all duration-500 absolute left-1/2 -translate-x-1/2 top-0 opacity-0 group-hover:opacity-100"
+                    />
+                  )}
                 </div>
                 <div
                   className={`flex justify-center transition-opacity duration-500 ${
-                    !isEducation ? "group-hover:opacity-0" : ""
+                    !isEducation ? "group-hover:hidden" : ""
                   }`}
                 >
                   <img

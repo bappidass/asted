@@ -2,8 +2,9 @@ import { Button } from "@/components/ui/button";
 import newsFeaturedImage from "@/assets/news.png";
 import newsThumb1 from "@/assets/news.png";
 import newsThumb2 from "@/assets/news.png";
-
+import { useNavigate } from "react-router-dom";
 const NewsEvents = () => {
+  const navigate  = useNavigate();
   const newsItems = [
     {
       id: 1,
@@ -76,6 +77,7 @@ const NewsEvents = () => {
             {newsItems.map((item) => (
               <article
                 key={item.id}
+                onClick={()=>navigate('/news-Details')}
                 className="relative flex flex-col sm:flex-row items-start sm:items-center p-3 sm:p-4 md:p-5 gap-4 sm:gap-6 bg-[#F2F2F2] rounded-lg"
               >
                 <div className="w-full sm:w-1/3 relative">
