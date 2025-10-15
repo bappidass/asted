@@ -4,7 +4,6 @@ import { X, Heart, Share2 } from 'lucide-react';
 const SocialOutreachComponent = () => {
   const [selectedPost, setSelectedPost] = useState(null);
 
-  // ✅ Dummy Data
   const socialOutreachs = [
     {
       id: 1,
@@ -133,20 +132,16 @@ const SocialOutreachComponent = () => {
       {selectedPost && (
         <div className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
           <div className="bg-[hsl(var(--brand-white))] rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-hidden shadow-2xl">
-            <div className="flex items-center justify-between p-6 border-b border-[hsl(var(--brand-light-gray))]">
-              <div className="flex items-center gap-3">
-                
-              </div>
-              <button
+         
+
+            <div  className="overflow-y-auto max-h-[70vh] relative">
+               <button
                 onClick={closePopup}
-                className="p-2 hover:bg-[hsl(var(--brand-light-gray))] rounded-full transition-colors"
+                className="p-2 bg-primary text-white rounded-full transition-colors absolute top-4 left-4"
               >
                 <X className="w-5 h-5" />
               </button>
-            </div>
-
-            <div onClick={() => window.open(selectedPost.link, '_blank')} className="overflow-y-auto max-h-[70vh]">
-              <img src={selectedPost.image} alt="Post" className="w-full h-48 object-cover" />
+              <img src={selectedPost.image} alt="Post" className="w-full h-60 object-cover" />
               <div className="p-6">
                   <div className=" text-primary  py-1.5 sm:py-2 font-oswald font-semibold text-xs sm:text-sm">
                   {formatDate(selectedPost.date)}
