@@ -9,7 +9,7 @@ import Index from "./pages/Index";
 import Careers from "./pages/Careers";
 import Tender from "./pages/Tenders.tsx";
 import WorkDetails from "./pages/workDetails.tsx";
-import NewsDetails from "./pages/newsDetails.tsx";
+import NewsDetails from "./pages/News-details.tsx";
 import RefundPolicy from "./pages/RefundPolicy.tsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 import TermsAndConditions from "./pages/TermsAndConditions.tsx";
