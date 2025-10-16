@@ -20,7 +20,7 @@ const Statistics = () => {
               <h3 className="font-oswald font-bold text-stats leading-none">
                 {stat.number}
               </h3>
-              <p className="font-work-sans text-body tracking-wider opacity-90">
+              <p className="font-work-sans font-bold text-body tracking-wider opacity-90">
                 {stat.label}
               </p>
             </div>

@@ -57,7 +57,7 @@ const Services = () => {
 
   return (
     <section id="works">
-      <div className="container mx-auto px-6">
+      <div className="mx-auto ">
         <div className="grid md:grid-cols-2 xl:grid-cols-4">
           {services.map((service, index) => {
             const isEducation = service.title === "EDUCATION";

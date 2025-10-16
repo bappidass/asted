@@ -10,7 +10,7 @@ const Donation = () => {
 
   return (
     <section className="py-6 bg-background">
-      <div className="container mx-auto px-6">
+      <div className=" mx-auto md:px-6">
         <div className="bg-brand-light-gray border-2 border-primary rounded-lg overflow-hidden">
           <div className="grid lg:grid-cols-2">
             <div className="bg-primary text-primary-foreground p-6 space-y-8">

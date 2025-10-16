@@ -7,16 +7,16 @@ const About = () => {
       <div className="mx-auto ">
         <div className="grid lg:grid-cols-2  items-center gap-4 md:gap-0">
 
-          <div className="flex space-y-8">
-            <div className=" sm:w-1/3 relative ">
+          <div className="flex space-y-8 md:p-4">
+            <div className=" w-1/2 relative  ">
               <img
                 src={charityManImage}
                 alt="Indigenous community member"
-                className="w-[300px] h-[380px] absolute sm:top-[-80px] z-10"
+                className="w-[300px] h-[380px] absolute sm:top-[-40px] lg:top-[-80px] z-10 left-[-20px] sm:left-[-60px] object-cover rounded-lg"
              
               />
             </div>
-            <div className="w-full p-2 sm:p-0">
+            <div className="flex flex-col items-start justify-between w-full p-2 sm:p-0">
 
               <h2 className="font-oswald font-bold text-section-header text-primary mb-6">
                 ASPIRATION CHARITY
@@ -30,7 +30,7 @@ const About = () => {
                 </p>
               </div>
 
-              <div className="flex flex-col items-end sm:flex-row gap-4 p-2">
+              <div className="flex flex-col items-end sm:flex-row gap-4 md:p-2">
                 <Button variant="cta" size="cta">
                   JOIN NOW
                 </Button>
@@ -40,7 +40,7 @@ const About = () => {
 
           </div>
 
-          <div className="order-3 lg:col-span-1 bg-primary text-primary-foreground p-8 rounded-lg">
+          <div className="order-3 lg:col-span-1 bg-primary text-primary-foreground p-8 md:p-20 rounded-lg">
             <h3 className="font-oswald font-bold text-card-header mb-6">
               DONATION
             </h3>
@@ -49,7 +49,7 @@ const About = () => {
               better Education, Environmental Design, and stronger Livelihood cultural
               preservation and pathways to inclusive development.
             </p>
-            <Button variant="white-outline" size="cta" >
+            <Button variant="white-outline" size="cta" className="bg-white text-primary">
               DONATE NOW
             </Button>
           </div>
